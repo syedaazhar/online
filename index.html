@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body onload="init()">
+    <!-- 
+        ************************
+                header
+        ************************
+     -->
+
+    <nav>
+        <div class="nav-wrapper white">
+            <a href="#" class="brand-logo center  orange-text">Foodies Club</a>
+
+        </div>
+    </nav>
+
+    <!-- 
+        ************************
+          Full screen navbar
+        ************************
+     -->
+
+    <nav class="full-screen-nav">
+        <div class="nav-wrapper white">
+            <a href="#" data-target="slide-out" class="sidenav-trigger">
+                <i class="large material-icons orange-text">menu</i>
+            </a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li class="nav-list">
+                    <a href="#" class="orange-text">Recipes & Menus</a>
+                </li>
+                <li class="nav-list">
+                    <a href="#" class="orange-text">How-to</a>
+                </li>
+                <li class="nav-list">
+                    <a href="#" class="orange-text">Ingredients</a>
+                </li>
+                <li class="nav-list">
+                    <a href="#" class="orange-text">Videos</a>
+                </li>
+                <li class="nav-list">
+                    <a href="#" class="orange-text">Magazine</a>
+                </li>
+                <li class="nav-list">
+                    <a href="#" class="orange-text">Moveable Feast TV</a>
+                </li>
+            </ul>
+            <a class="waves-effect waves-light btn-large orange">
+                <i class="material-icons left">add_shopping_cart</i>
+                <p class="add-to-card">Cart <span class="card-numb">000</span> / PKR <span class="total-price">00000</span></p>
+            </a>
+        </div>
+    </nav>
+
+    <!-- 
+        ************************
+          mobile screen navbar
+        ************************
+     -->
+
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <!-- <img src="images/office.jpg"> -->
+                </div>
+                <!-- <a href="#user"><img class="circle" src="images/yuna.jpg"></a> -->
+                <a href="#name">
+                    <span class="white-text name">John Doe</span>
+                </a>
+                <a href="#email">
+                    <span class="white-text email">jdandturk@gmail.com</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <a href="#!">
+                <i class="material-icons">cloud</i>First Link With Icon</a>
+        </li>
+        <li>
+            <a href="#!">Second Link</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <a class="subheader">Subheader</a>
+        </li>
+        <li>
+            <a class="waves-effect" href="#!">Third Link With Waves</a>
+        </li>
+    </ul>
+
+    <!-- 
+        ************************
+          screen slider
+        ************************
+     -->
+
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="images/image-4.jpg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h3>Food Tastes Better!</h3>
+                    <h5 class="light grey-text text-lighten-3">When You Eat It With Your Family.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="images/image-9.jpg">
+                <!-- random image -->
+                <div class="caption left-align">
+                    <h3>Healthy Food</h3>
+                    <h5 class="light grey-text text-lighten-3">Eat Well Live Simply Laugh Often</h5>
+                </div>
+            </li>
+            <li>
+                <img src="images/image-3.jpg">
+                <!-- random image -->
+                <div class="caption right-align">
+                    <h3>People Who Love To Eat!</h3>
+                    <h5 class="light grey-text text-lighten-3">Are Always The Best People.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="images/image-4.jpeg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h3>GOOD FOOD!</h3>
+                    <h5 class="light grey-text text-lighten-3">GOOD MOOD</h5>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 
+        ************************
+                menu card
+        ************************
+     -->
+
+    <section>
+        <!-- <div class="row"> -->
+        <!-- product card -->
+        <!-- <div class="col s12 m6">
+                <div class="card z-depth-5"> -->
+        <!-- product name -->
+        <!-- <div class="card-content white">
+                        <p>Krunch Burger</p>
+                    </div> -->
+        <!-- product img -->
+        <!-- <div class="card-image">
+                        <div class="img" id="img-1"></div> -->
+        <!-- <a class="btn-floating halfway-fab waves-effect waves-light orange  pulse"><i class="material-icons">+</i></a> -->
+        <!-- </div> -->
+        <!-- add to order card and produect price -->
+        <!-- <div class="card-content orange lighten-2">
+                        <div class="form-group"> -->
+        <!-- order to product -->
+        <!-- <div class="input-group mb-3"> -->
+        <!-- 
+                                    if the user should reduce some of the order, 
+                                    so they will press this button 
+                                -->
+        <!-- <div class="input-group-prepend subraction-btn" onclick="subraction()">
+                                    <span class="input-group-text">-</span>
+                                </div> -->
+        <!-- this input show product quanitity-->
+        <!-- <input type="text" class="form-control add-count" aria-label="Amount (to the nearest dollar)"> -->
+
+        <!-- 
+                                    if the user purchase this product so they will press this button 
+                                -->
+        <!-- <div class="input-group-append add-btn" onclick="add()">
+                                    <span class="input-group-text">+</span>
+                                </div>
+                            </div>
+                        </div> -->
+        <!-- this is a product price element -->
+        <!-- <p>PKR 170</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+    </section>
+
+    <div class="contact z-depth-5 orange lighten-2">
+        <h1 class="white-text"> Contact us</h1>
+
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Placeholder" id="first_name" type="text" class="validate ">
+                        <label for="first_name" class="white-text">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name" class="white-text">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                        <label for="disabled" class="white-text">Disabled</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password" class="white-text">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email" class="white-text">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 white-text">
+                        This is an inline input field:
+                        <div class="input-field inline">
+                            <input id="email_inline" type="email" class="validate">
+                            <label for="email_inline" class="white-text">Email</label>
+                            <span class="helper-text white-text" data-error="wrong" data-success="right">Helper text</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
