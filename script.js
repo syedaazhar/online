@@ -81,7 +81,7 @@ let productdetails = [
 
 function init() {
     let sectionItem = document.querySelector('section');
-    for (let i = 1; 0 < productdetails.length; i++) {
+    for (let i = 1; i < productdetails.length; i++) {
 
         sectionItem.innerHTML += `<div class="row">
         <!-- product card -->
@@ -111,7 +111,6 @@ function init() {
                             </div>
                             <!-- this input show product quanitity-->
                             <input type="text" class="form-control add-count" id="${productdetails[i].inputId}" aria-label="Amount (to the nearest dollar)">
-
                             <!-- 
                                 if the user purchase this product so they will press this button 
                             -->
@@ -131,33 +130,39 @@ function init() {
 }
 
 
-
 let numb = 1;
-
+let totalAmount =0;
 function subraction(index) {
-    let count = productdetails[index].count;
+      let count = productdetails[index].count;
 
     if (count > 0) {
-
+     
         document.querySelector(`#${productdetails[index].inputId}`).value = productdetails[index].count--;
         document.querySelector('.card-numb').innerHTML = numb--;
-        totalAmount()
+
+         // total priice
+      
+      totalAmount = parseInt(document.querySelector('.total-price').innerHTML);
+      totalAmount -= productdetails[index].price;
+      document.querySelector('.total-price').innerHTML =parseFloat(totalAmount);
     }
+     
 }
 
 
 function add(index) {
-    let count = productdetails[index].count;
+   
+    // let price = productdetails[index].price
     document.querySelector(`#${productdetails[index].inputId}`).value = productdetails[index].count++;
     document.querySelector('.card-numb').innerHTML = numb++;
-    totalAmount()
+
+   // total priice
+    
+    totalAmount = parseInt(document.querySelector('.total-price').innerHTML);
+    totalAmount += productdetails[index].price;
+    document.querySelector('.total-price').innerHTML =parseFloat(totalAmount);
+    
 }
- function totalAmount(index){
-   let price =productdetails[index].price
-     document.querySelector('.total-price').innerHTML= parseInt(price * count);
- }
-
-
 
 
 
